@@ -2,9 +2,9 @@ import { all, createRef, range, sequence, waitFor } from "@motion-canvas/core";
 import { Circle, Code, Layout, Line, makeScene2D, Node, Rect, Spline, Txt } from "@motion-canvas/2d";
 
 import { Text } from "../../../lib/components/text";
+import { Background } from "../../../lib/components/background";
 import { BLUE, GREEN, MANTLE, RED, SURFACE0, TEXT } from "../../../lib/styles/colors";
 
-import contour from "./contour.glsl";
 
 export default makeScene2D(function*(view) {
   let container = createRef<Node>();
@@ -40,7 +40,8 @@ export default makeScene2D(function*(view) {
 
   view.add(
     <>
-      <Rect size={[1080, 1920]} shaders={{ fragment: contour }}></Rect>
+      <Background />
+
       <Node ref={container}>
         <Rect ref={background}
           size={[1026, 250]}

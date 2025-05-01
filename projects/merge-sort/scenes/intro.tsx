@@ -1,10 +1,10 @@
 import { createRef, waitFor } from "@motion-canvas/core";
-import { Layout, makeScene2D, Rect, Txt } from "@motion-canvas/2d";
+import { Layout, makeScene2D, Txt } from "@motion-canvas/2d";
 
 import { Text } from "../../../lib/components/text";
 import { GREEN } from "../../../lib/styles/colors";
+import { Background } from "../../../lib/components/background";
 
-import contour from "./contour.glsl";
 
 export default makeScene2D(function*(view) {
   let container = createRef<Layout>();
@@ -15,12 +15,7 @@ export default makeScene2D(function*(view) {
 
   view.add(
     <>
-      <Rect
-        size={[1080, 1920]}
-        shaders={{
-          fragment: contour
-        }}
-      ></Rect>
+      <Background />
 
       <Layout ref={container} layout direction={"column"} gap={20} alignItems="center">
         <Layout layout gap={20}>
