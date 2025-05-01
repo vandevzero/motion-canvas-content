@@ -1,0 +1,6 @@
+Merge sort begins by treating the input array as a collection of single-element groups.
+It then repeatedly merges these groups to produce larger sorted groups.
+This merging process works by looking at the first item of each group and taking the smaller of the two.
+After taking the smaller item, it will move to the next item in that group.
+Once either group has been completely scanned, the remaining items from the other group are appeneded to the result.
+After all groups are merged, the result is a single sorted array.
