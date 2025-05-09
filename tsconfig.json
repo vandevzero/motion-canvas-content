@@ -2,4 +2,7 @@
   "extends": "@motion-canvas/2d/tsconfig.project.json",
   "include": ["projects", "lib"],
   "allowImportingTsExtensions": true,
+  "compilerOptions": {
+    "declaration": true,
+  }
 }

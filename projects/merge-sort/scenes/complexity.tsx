@@ -4,6 +4,7 @@ import { Circle, Code, Layout, Line, makeScene2D, Node, Rect, Spline, Txt } from
 import { Text } from "../../../lib/components/text";
 import { Background } from "../../../lib/components/background";
 import { BLUE, GREEN, MANTLE, RED, SURFACE0, TEXT } from "../../../lib/styles/colors";
+import { TS } from "../../../lib/components/code";
 
 
 export default makeScene2D(function*(view) {
@@ -54,15 +55,13 @@ export default makeScene2D(function*(view) {
         ></Rect>
 
         <Node ref={timeComplexity}>
-          <Code
+          <TS
             ref={code}
             code={"O(n log n)"}
-            fontFamily={"Maple Mono NF"}
             fontStyle={"italic"}
-            fontWeight={900}
             fontSize={70}
             opacity={0}
-          ></Code>
+          />
 
           <Spline ref={nSquaredPlot} end={0} points={nSquaredPoints} lineWidth={10} stroke={RED} endArrow arrowSize={14}></Spline>
           <Spline ref={nLogNPlot} end={0} points={nLogNPoints} lineWidth={10} stroke={BLUE} endArrow arrowSize={14}></Spline>
@@ -78,11 +77,11 @@ export default makeScene2D(function*(view) {
           <Text text={"Space Complexity:"} fontSize={65} fill={TEXT} position={[0, -100]}></Text>
           <Layout ref={quickSort} opacity={0} layout gap={30}>
             <Text text={"Quicksort:"} fontSize={50} fill={TEXT}></Text>
-            <Code code={"O(log n)"} fontSize={50} fontFamily={"Maple Mono NF"} fontStyle={"italic"} fontWeight={900}></Code>
+            <TS code={"O(log n)"} fontStyle={"italic"} />
           </Layout>
           <Layout ref={mergeSort} opacity={0} layout gap={30}>
             <Text text={"Merge Sort:"} fontSize={50} fill={TEXT}></Text>
-            <Code code={"O(n)"} fontSize={50} fontFamily={"Maple Mono NF"} fontStyle={"italic"} fontWeight={900}></Code>
+            <TS code={"O(n)"} fontStyle={"italic"} />
           </Layout>
         </Layout>
       </Node>

@@ -9,10 +9,17 @@
   },
   "dependencies": {
     "@catppuccin/palette": "^1.7.1",
+    "@codemirror/language": "^6.11.0",
+    "@lezer/css": "^1.1.11",
+    "@lezer/generator": "^1.7.3",
+    "@lezer/go": "^1.0.0",
+    "@lezer/highlight": "^1.2.1",
     "@lezer/javascript": "^1.5.1",
+    "@lezer/rust": "^1.0.2",
     "@motion-canvas/2d": "^3.17.2",
     "@motion-canvas/core": "^3.17.2",
     "@motion-canvas/ffmpeg": "^1.1.0",
+    "@plutojl/lezer-julia": "^0.12.4",
     "@types/node": "^22.15.3"
   },
   "devDependencies": {
